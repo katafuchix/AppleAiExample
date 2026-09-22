@@ -6,7 +6,10 @@
 //
 
 import SwiftUI
-import Translation // iOS 18+
+import Translation // iOS 18+  デバイス内の軽量AIモデルを使ってテキストを翻訳するフレームワーク
+
+// 外部の翻訳APIキー（API Key）などを取得することなく、ローカル処理で安全かつ即座にテキストを多言語翻訳します。
+// AIそのものの機能とは言い難い
 
 struct TranslationDemoView: View {
     @State private var textToTranslate = "Hello, Apple Intelligence!"

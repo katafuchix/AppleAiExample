@@ -3,8 +3,20 @@ import Playgrounds
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            NavigationStack {
+                List {
+                    Section(header: Text("Example")) {
+                        Group {
+                            NavigationLink("Image Generate Demo", destination: ImageGenDemoView())
+                            NavigationLink("Translation Demo", destination: TranslationDemoView())
+                            NavigationLink("Foundation Models Demo", destination: FoundationModelsDemoView())
+                            NavigationLink("Integrated AI Demo", destination: IntegratedAIDemoView())
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
