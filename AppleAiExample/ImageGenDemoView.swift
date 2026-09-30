@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ImagePlayground // iOS 18+
+import UIKit
 
 struct ImageGenDemoView: View {
     @Environment(\.supportsImagePlayground) private var supportsImagePlayground
@@ -25,6 +26,18 @@ struct ImageGenDemoView: View {
                 ) { url in
                     generatedImageURL = url
                 }
+                
+                // 生成済みの画像があれば画面に表示
+                if let url = generatedImageURL,
+                   let uiImage = UIImage(contentsOfFile: url.path) {
+
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxHeight: 300)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                }
+                
             } else {
                 Text("この端末ではImage Playgroundを利用できません")
             }

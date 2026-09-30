@@ -85,7 +85,7 @@ struct FoundationModelsDemoView: View {
     }
 }
 
-
+/*
 #### 2. `LanguageModelSession(instructions:)` でAIのキャラクターを決める
 * **ポイント：**
   * AIとの対話を開始するセッションを作る際、`instructions`（システムプロンプト）を渡します[cite: 4]。
@@ -96,3 +96,4 @@ struct FoundationModelsDemoView: View {
 * **ポイント：**
   * `imagePlaygroundSheet` と並ぶ、**Foundation Modelsにおける最大の核心メソッド**です[cite: 2, 4]。
 * **なぜ大事？：**
+*/
